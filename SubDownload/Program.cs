@@ -93,6 +93,8 @@ namespace SubDownload
 
             var url = @"http://api.thesubdb.com/?action=download&hash=" + hash + "&language=en";
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
+            
+            //Specify your own user agent below. Do not use the one here.
             req.UserAgent = @"SubDB/1.0 (DipraWin10/0.1; http://diprawin10.in/subdb)";
             req.Timeout = 50000;
             req.KeepAlive = true;
