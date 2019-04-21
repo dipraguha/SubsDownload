@@ -37,7 +37,8 @@ namespace SubDownload
             var videoFiles = Directory.EnumerateFiles(dirPath, "*.*", SearchOption.TopDirectoryOnly)
                                         .Where(f => f.EndsWith(".mp4", StringComparison.OrdinalIgnoreCase)
                                             || f.EndsWith(".avi", StringComparison.OrdinalIgnoreCase)
-                                            || f.EndsWith(".mkv", StringComparison.OrdinalIgnoreCase));
+                                            || f.EndsWith(".mkv", StringComparison.OrdinalIgnoreCase)
+                                            || f.EndsWith(".flv", StringComparison.OrdinalIgnoreCase));
 
             foreach (var file in videoFiles)
             {
